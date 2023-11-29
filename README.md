@@ -20,3 +20,4 @@ Some of the challenges and limitations that I faced during the work were:
 
 Below you can see the result of my service 👽. 
 
+![image](https://github.com/NickKar30/Car_price_predicion_with_service/assets/112766379/d641fac5-20fb-4c28-9a92-00bd92d6b2fd)

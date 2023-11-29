@@ -16,4 +16,7 @@ Some of the challenges and limitations that I faced during the work were:
 
 - The dataset had some features that were not normally distributed, which could affect the assumptions of the linear regression model. I used histograms and boxplots to visualize the distribution of the features, and applied logarithmic transformation to make them more normal.
 
-- The dataset had some categorical features that had to be encoded into numerical values. For this I used one hot encoding
+- The dataset had some categorical features that had to be encoded into numerical values. For this I used one hot encoding.
+
+Below you can see the result of my service 👽. 
+

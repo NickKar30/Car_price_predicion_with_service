@@ -110,13 +110,11 @@ class Model:
         
         df = self.clean_torque(df)
 
-        #Р—Р°РїРѕР»РЅРµРЅРёРµ РјРµРґРёР°РЅРЅС‹РјРё
         cols = ['mileage', 'engine', 'max_power', 'torque', 'max_torque_rpm', 'seats']
         df[cols] = self.fill_df.transform(df[cols])
         
         df = df.astype({'engine': 'int', 'seats': 'int'})
 
-        #РќРѕРІС‹Рµ РїРѕР»СЏ
         df['age'] = 2021 - df['year']
         df.drop(['year'],axis = 1,inplace = True)
         df['owner'] = df['owner'].replace({'Test Drive Car': 0, 'First Owner': 1, 'Second Owner': 2, 'Third Owner': 3, 'Fourth & Above Owner':4})
@@ -136,7 +134,6 @@ class Model:
                                     columns=self.enc.get_feature_names_out(cat_cols), dtype=int)
         X= pd.concat([df.drop(columns=cat_cols), df_enc], axis=1)
 
-        #РџСЂРµРґСЃРєР°Р·Р°РЅРёРµ
         y_pred = self.ridge.predict(X)
         y_pred = np.exp(y_pred)
         get_df['selling_price'] = y_pred        

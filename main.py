@@ -103,7 +103,7 @@ class Model:
         df = get_df.copy()
         if 'selling_price' in df.columns:
             df.drop('selling_price', axis =1, inplace=True)
-        #РџСЂРёРІРµРґРµРЅРёРµ Рє С‡РёСЃР»РѕРІС‹Рј Р·РЅР°С‡РµРЅРёСЏРј
+            
         df['mileage'] = pd.to_numeric(df['mileage'].replace('kmpl|km/kg', '', regex=True).str.strip()).astype(float)
         df['engine'] = pd.to_numeric(df['engine'].replace('CC', '', regex=True).str.strip()).astype(float)
         df['max_power'] = pd.to_numeric(df['max_power'].replace('bhp', '', regex=True).str.strip()).astype(float)
